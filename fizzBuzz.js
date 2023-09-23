@@ -1,17 +1,19 @@
-let arr = [2, 4, 3, 9, 15, 18, 25, 30, 10, 27];
+const findFizzBuzz = (n) => {
+  for (let num = 1; num <= n; num++) {
+    const mod3 = num % 3 === 0;
+    const mod5 = num % 5 === 0;
 
-const findFizzBuzz = () => {
-  for (let num of arr) {
-    if (num % 3 === 0 && num % 5 === 0) {
+    if (mod3 && mod5) {
       console.log("FizzBuzz");
-    } else if (num % 3 === 0) {
+    } else if (mod3) {
       console.log("Fizz");
-    } else if (num % 5 === 0) {
+    } else if (mod5) {
       console.log("Buzz");
     } else {
-      console.log("num", num);
+      console.log(num);
     }
   }
 };
 
-findFizzBuzz(arr);
+const n = 20;
+findFizzBuzz(n);

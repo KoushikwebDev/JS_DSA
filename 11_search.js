@@ -38,7 +38,6 @@ const binarySearchRec = (arr, target, start, end) => {
 
 console.log(binarySearch(arr, 4));
 console.log(binarySearchRec(arr, 4, 0, arr.length - 1)); //logn, array is getting half in every time
-
 // Big O =  logN worst case, O(1) best case
 
 // lenear search
