@@ -29,7 +29,6 @@
 // //
 function sum(x) {
   let currentSum = x;
-
   function addNext(y) {
     if (typeof y === "undefined") {
       return currentSum;
