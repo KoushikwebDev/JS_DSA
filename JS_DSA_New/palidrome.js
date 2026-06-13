@@ -20,3 +20,20 @@ const isPalidrome = (num)=>{
 };
 
 console.log(isPalidrome(121));
+
+
+const isPalidromeStr = (str) =>{
+    if(str.length < 3) return str;
+
+    let left = 0, right = str.length -1;
+
+    while(left <= right){
+        if(str[left] !== str[right]) return false;
+        left++;
+        right--;
+    }
+
+    return true;
+};
+
+console.log(isPalidromeStr("madam"))

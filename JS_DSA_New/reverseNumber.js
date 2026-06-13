@@ -4,9 +4,11 @@ const reverseNumber = (num) => {
     let reverseNum = 0;
     num = Math.abs(num);
     while(num > 0){
-        const rem = num % 10;
-        reverseNum = (reverseNum*10) + rem;
-        num = Math.floor(num/10);
+        const rem = num % 10; // it will grab the last digit of the number
+
+        reverseNum = (reverseNum*10) + rem; 
+        
+        num = Math.floor(num/10); // it will remove the last digit of the number, by dividing it by 10 and taking the floor value.
     };
 
     const limit = Math.pow(2,31);
