@@ -7,8 +7,8 @@ const selectionSort = (arr) => {
 
   for (let i = 0; i < n - 1; i++) { // n -1 => because last element will be already sorted
     let minIndex = i;
-    for (let j = i + 1; j < n; j++) {
-      if (arr[j] < arr[minIndex]) {
+    for (let j = i + 1; j < n; j++) { // j = i + 1 => because we are comparing with the minimum index
+      if (arr[j] < arr[minIndex]) { 
         minIndex = j;
       }
     }

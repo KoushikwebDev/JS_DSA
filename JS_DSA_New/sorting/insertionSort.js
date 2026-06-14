@@ -18,7 +18,7 @@ const insertionSort = (arr) => {
       prevIndex--;
     }
 
-    arr[prevIndex + 1] = currentEle;
+    arr[prevIndex + 1] = currentEle; // current element will be positioned at correct place after while loop breaks
   }
 
   return arr;

@@ -46,8 +46,6 @@ const bubbleSort2 = (arr) => {
       }
     }
 
-    console.log(swapped);
-
     if (!swapped) break;
   }
 
@@ -55,7 +53,6 @@ const bubbleSort2 = (arr) => {
 };
 
 console.log(bubbleSort2([3, 2, 3, 4, 1]));
-
 
 // Bubble Sort:
 // Keep pushing largest element to the end.
