@@ -1,5 +1,7 @@
 const arr = [7, 1, 5, 4, 3, 2];
 
+// selection sort => select minimum 
+
 const selectionSort = (arr) => {
   const n = arr.length;
 
@@ -28,6 +30,9 @@ console.log(selectionSort(arr));
 
 // Selection Sort:
 // Keep pulling smallest element to the front.
+
+// Insertion Sort:
+// Keep inserting the current element to its correct position in the sorted part of the array.
 
 // Pass 1:
 // [7,1,5,4,3,2]

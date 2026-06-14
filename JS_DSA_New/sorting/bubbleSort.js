@@ -2,6 +2,7 @@
 // desc => descending order => 5,4,3,2,1
 
 // In every itaration the largest ele will move to the last, and so on
+// pushes the largest element to the end in each pass
 
 const arr = [4, 9, 1, 2, 0];
 
@@ -61,3 +62,6 @@ console.log(bubbleSort2([3, 2, 3, 4, 1]));
 
 // Selection Sort:
 // Keep pulling smallest element to the front.
+
+// Insertion Sort:
+// Keep inserting the current element to its correct position in the sorted part of the array.
