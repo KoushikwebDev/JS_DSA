@@ -9,7 +9,7 @@ const arr = [4, 9, 1, 2, 0];
 const bubbleSort = (arr) => {
   const n = arr.length;
 
-  for (let i = 0; i < n - 1; i++) {
+  for (let i = 0; i < n - 1; i++) { // n-1 because we are comparing with the next element, so we need to stop at the second last element
     for (let j = 0; j < n - 1 - i; j++) {
       // actually the j will go upto for this case j=3
       if (arr[j] > arr[j + 1]) {
@@ -40,7 +40,7 @@ const bubbleSort2 = (arr) => {
     let swapped = false;
     for (let j = 0; j < n - 1 - i; j++) {
       if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // this will consume more space than the temp variable, but it is more concise and easier to read
 
         swapped = true;
       }
