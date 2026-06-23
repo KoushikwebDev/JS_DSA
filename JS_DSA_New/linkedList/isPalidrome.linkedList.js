@@ -23,7 +23,7 @@ const isPalindrome2 = function(head) {
     };
     // reverse second half
     let prev = null;
-    let current = slow;
+    let current = slow; // the middle node
     while(current){
         const nextNode = current.next;
         current.next = prev;
