@@ -7,43 +7,42 @@ Input: head = [1,2,3,4,5], k = 2
 Output: [4,5,1,2,3]
  */
 
-const  rotateRight = function(head, k) {
-    let current = head;
-    let length = 0;
-    while(current){
-        length++;
-        current = current.next;
-    };
+const rotateRight = function (head, k) {
+  let current = head;
+  let length = 0;
+  while (current) {
+    length++;
+    current = current.next;
+  }
 
-    const actualRotateNeed = k >= length ? Math.floor(k%length) : k;
-    if(!actualRotateNeed) return head;
+  const actualRotateNeed = k >= length ? Math.floor(k % length) : k;
+  if (!actualRotateNeed) return head;
 
-    const dummy = new ListNode();
-    dummy.next = head; // connected the existing list
-    
-    let slow = dummy, fast = dummy;
+  const dummy = new ListNode();
+  dummy.next = head; // connected the existing list
 
-    for(let i = 0; i <= actualRotateNeed; i++){
-        fast = fast.next;
-    }
+  let slow = dummy,
+    fast = dummy;
 
-    while(fast){
-        fast = fast.next;
-        slow = slow.next;
-    };
+  for (let i = 0; i <= actualRotateNeed; i++) {
+    fast = fast.next;
+  }
 
-    const newHead = slow.next; // new list
-    slow.next = null; // breaking the connection
+  while (fast) {
+    fast = fast.next;
+    slow = slow.next;
+  }
 
-    // find tail fo the new list
-    let tail = newHead;
-    while(tail && tail.next){
-        tail = tail.next;
-    };
+  const newHead = slow.next; // new list
+  slow.next = null; // breaking the connection
 
-    tail.next = dummy.next // connect tail to the original head
+  // find tail fo the new list
+  let tail = newHead;
+  while (tail && tail.next) {
+    tail = tail.next;
+  }
 
-    return newHead
+  tail.next = dummy.next; // connect tail to the original head
 
-
+  return newHead;
 };
