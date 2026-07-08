@@ -13,8 +13,8 @@ class Queue {
     return this.items.shift(); // removing an element from the front of the queue
   }
 
-  front() {
-    return this.items[0];
+  front() { // also known as top
+    return this.items[0]; 
   }
 
   isEmpty() {

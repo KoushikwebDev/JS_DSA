@@ -11,7 +11,7 @@ class Stack {
   }
 
   pop() {
-    return this.items.pop();
+    return this.items.pop(); // deleting the last element of the array, actually the top of the stack
   }
 
   peek() {
