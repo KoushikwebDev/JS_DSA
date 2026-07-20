@@ -7,7 +7,7 @@ const binarySearch = (arr, target) => {
   right = arr.length - 1;
 
   while (left <= right) {
-    const mid = Math.floor((left + right) / 2);
+    const mid = Math.floor(left + (right - left) / 2);
 
     if (arr[mid] === target) {
       return mid;
@@ -24,3 +24,5 @@ const binarySearch = (arr, target) => {
 };
 
 console.log(binarySearch(arr, target));
+
+// optimised formula for finding mid is left + [(right - left) / 2], this will prevent overflow in case of large numbers. This will never exceed the maximum value of integer in JS, as it will always be less than or equal to right.
