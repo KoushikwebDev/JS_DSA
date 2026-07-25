@@ -38,13 +38,13 @@ const solution = function(isBadVersion) {
         let left = 1;
         let right = n;
 
-        while(left < right){
+        while(left < right){ // it will not <= because we are returning right at the end, so we need to make sure left and right are not equal
             const mid = left + Math.floor((right - left)/2);
 
             if(!isBadVersion(mid)){
                 left = mid + 1
             } else {
-                right = mid;
+                right = mid; // considering mid as the first bad version, so we are not doing mid - 1
             }
         };
 
