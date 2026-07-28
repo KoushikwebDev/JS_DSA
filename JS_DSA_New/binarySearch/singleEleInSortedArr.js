@@ -24,7 +24,7 @@ const singleNonDuplicate = function(arr) {
 
     while(l <= r){
         const m = l + Math.floor((r - l)/2);
-        if(arr[m - 1] !== arr[m] && arr[m+1] !== arr[m]) return arr[m];
+        if(arr[m - 1] !== arr[m] && arr[m+1] !== arr[m]) return arr[m]; // if single element is found
         // check pair in which side
         if(arr[m] == arr[m-1]){ // left pair
             const isLeftOdd = ((m - 1) - l) % 2 === 1;
